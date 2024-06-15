@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pullopaxiT2.Vistas.vPrincipal"
+             Title="vPrincipal">
+    <VerticalStackLayout>
+
+        <Label/>
+        <Label/>
+
+        <Image
+    Source="https://www.uisrael.edu.ec/wp-content/uploads/2023/01/logo-uisrael@2x-e1674848533171-1536x388.png"
+    WidthRequest="300"
+    ></Image>
+        <Label/>
+        <Label/>
+
+        <Label 
+            Text="SISTEMA DE CALIFICACIONES"
+            FontSize="Title"
+            HorizontalOptions="CenterAndExpand"/>
+        <StackLayout Orientation="Horizontal" Padding="20">
+            <Picker x:Name="pkEstudiantes" HorizontalOptions="CenterAndExpand" FontSize="Subtitle" FontAttributes="Italic" Title="Selecciona el estudiante"  HorizontalTextAlignment="Start" >
+                <Picker.Items>
+                    <x:String>Paul Padilla</x:String>
+                    <x:String>Karen Vargas</x:String>
+                    <x:String>Ana Ruiz</x:String>
+                </Picker.Items>
+            </Picker>
+            <DatePicker x:Name="dpFecha"  Format="dd/mm/yyyy" FontSize="Subtitle" HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Padding="20">
+
+            <Label
+           Text="Nota Parcial 1"
+           FontAttributes="Bold" 
+           FontSize="Title"
+           HorizontalOptions="CenterAndExpand" />
+            <Label
+            Text="Nota Parcial 2"
+            FontAttributes="Bold"                 
+            FontSize="Title"
+            HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Padding="20">
+            <Entry x:Name="txtnotaP1" Placeholder="Nota p1" FontSize="20" Keyboard="Numeric" 
+                   HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" TextChanged="txtnotaP1_TextChanged"></Entry>
+            <Entry x:Name="txtnotaP2" Placeholder="Nota p2" FontSize="20" Keyboard="Numeric" 
+                   HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center" TextChanged="txtnotaP2_TextChanged"></Entry>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"  Padding="20">
+            <Entry x:Name="txtnotaExamen" Placeholder="Exámen p1" FontSize="20" Keyboard="Numeric" 
+                   HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextChanged="txtnotaExamen_TextChanged"></Entry>
+            <Entry x:Name="txtnotaExamen2" Placeholder="Exámen p2" FontSize="20" Keyboard="Numeric" 
+                   HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextChanged="txtnotaExamen2_TextChanged"></Entry>
+        </StackLayout>
+
+        <Button
+              x:Name="btnCalcular"
+            BackgroundColor="DarkSeaGreen"
+              Text="     CALCULAR     "
+              SemanticProperties.Hint="Counts the number of times you click"
+              Clicked="btnCalcular_Clicked"
+              HorizontalOptions="CenterAndExpand" />
+
+    </VerticalStackLayout>
+</ContentPage>
